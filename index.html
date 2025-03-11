@@ -25,19 +25,19 @@
         <div class="wrapper">
             <div class="header__background"></div>
             <div class="header__logo">
-                <img class="header__logo-icon" src="/assets/turnip.png" alt="repa icon">
+                <img class="header__logo-icon" id="main-link" src="./assets/turnip.png" alt="repa icon">
                 <a href="index.html" class ="header__logo-text">РепаПРО</a>
             </div>
             <nav class="header__nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link">О нас</a>
+                        <a href="#about__us-link" class="nav__link">О нас</a>
                     </li>
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link">Услуги</a>
+                        <a href="#how_we_work-link" class="nav__link">Услуги</a>
                     </li>
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link">Контакты</a>
+                        <a href="#contacts-link" class="nav__link">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -54,13 +54,13 @@
                     <svg class="circle" width="3.5%" height="3.5%" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="25.5" cy="25.5" r="17" stroke="white" stroke-width="5" />
                         </svg>                    
-                        <p class="actions__first-text" style="padding-left: 10%;" >Создадим отзывы для ведущих платформ, где вас сравнивают с конкурентами</p>
+                        <p class="actions__first-text" id="about__us-link" style="padding-left: 10%;" >Создадим отзывы для ведущих платформ, где вас сравнивают с конкурентами</p>
                 </div>
                 <div class="actions__second">
                     <svg class="circle" style="margin-left: 0.5%" width="3%" height="3%" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="27.5" cy="27.5" r="23" stroke="white" stroke-width="7" />
                         </svg>  
-                    <p class="actions__second-text" style="padding-left: 10%;">Обеспечим вовлеченный контакт с аудиторией в местах ее обитания: Яндекс Карты, 2ГИС, Отзовик и др.</p>    
+                    <p class="actions__second-text" style="padding-left: 15%;">Обеспечим вовлеченный контакт с аудиторией в местах ее обитания: Яндекс Карты, 2ГИС, Отзовик и др.</p>    
                 </div>                
             </div>
             <div class="actions__button" >
@@ -93,7 +93,7 @@
                   </defs>
                 </svg>
               </div>
-            <h1 class="work__title">Как мы работаем?</h1>
+            <h1 class="work__title" id="how_we_work-link">Как мы работаем?</h1>
             <div class="wrapper">
                 <div class="work__step">
                     <div class="step__header">
@@ -165,14 +165,14 @@
                 <div class="repair__before">
                     <div class="repair__wrapper">
                         <div class="before__tittle">
-                            <img class="repair__before-img" src="/assets/avito-icon.svg" alt="До продвижения">
+                            <img class="repair__before-img" src="./assets/avito-icon.svg" alt="До продвижения">
                             <span class="before__tittle-text">
                                 Ниша: <br>
                                 Строительнство и ремонт
                             </span>
                         </div>
                             <div class="rating">
-                                <img src="assets/star.png" alt="Star" class="rating__icon">
+                                <img src="./assets/star.png" alt="Star" class="rating__icon">
                                 <span class="rating__value">5.0</span>
                                 <span class="rating__separator">·</span>
                                 <span class="rating__reviews">1 ОТЗЫВ</span>
@@ -190,7 +190,7 @@
                     
                     <div class="repair__after">
                         <div class="rating">
-                            <img src="assets/star.png" alt="Star" class="rating__icon">
+                            <img src="./assets/star.png" alt="Star" class="rating__icon">
                             <span class="rating__value">5.0</span>
                             <span class="rating__separator">·</span>
                             <span class="rating__reviews">59 ОТЗЫВОВ</span>
@@ -215,19 +215,150 @@
                                 <span>ПТ</span> <span>СБ</span> <span>ВС</span> <span>ПН</span>
                               </div>
                           </div>
-                          
+                          <span class="repair__main-text">
+                            Количество обращений выросло до 280 в месяц!
+                        </span>
                     </div>
                 </div>
                 
                 
             </div>
-    </div>
 
 
     </div>
+
+    <div class="case_repair" style="padding-bottom: 10%;">
+        <div class="repair__bolck">
+            <h1 class="repair__title">Кейс: Разработка сайтов</h1>
+            <span class="repair__before-text">До продвижения:</span>
+            <span class="repair__after-text">После продвижения:</span>
+            <div class="repair__main">
+                <div class="repair__before">
+                    <div class="repair__wrapper">
+                        <div class="before__tittle">
+                            <img class="repair__before-img" src="./assets/avito-icon.svg" alt="До продвижения">
+                            <span class="before__tittle-text">
+                                Ниша: <br>
+                                Строительнство и ремонт
+                            </span>
+                        </div>
+                            <div class="rating">
+                                <img src="./assets/star.png" alt="Star" class="rating__icon">
+                                <span class="rating__value">5.0</span>
+                                <span class="rating__separator">·</span>
+                                <span class="rating__reviews">1 ОТЗЫВ</span>
+                            </div>
+                            <div class="before__text">
+                                <p class="before__text">
+                                    3 – 4 обращения в месяц. Продвижение не помогает, работает в минус. 
+                                </p>
+                                <p class="before__text">
+                                    Авито не приносил доход, конкуренты забирали всех клиентов
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="repair__after">
+                        <div class="rating">
+                            <img src="./assets/star.png" alt="Star" class="rating__icon">
+                            <span class="rating__value">5.0</span>
+                            <span class="rating__separator">·</span>
+                            <span class="rating__reviews">59 ОТЗЫВОВ</span>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart">
+                              <div class="bar small"></div>
+                              <div class="bar medium"></div>
+                              <div class="bar large"></div>
+                              <div class="bar small"></div>
+                              <div class="bar medium"></div>
+                              <div class="bar large"></div>
+                              <div class="bar xlarge"></div>
+                              <div class="bar xlarge"></div>
+                            </div>
+                            <div class="labels">
+                              <span>12</span> <span>14</span> <span>16</span> <span>18</span>
+                              <span>20</span> <span>22</span> <span>24</span> <span>26</span>
+                            </div>
+                            <div class="labels">
+                                <span>ПН</span> <span>ВТ</span> <span>СР</span> <span>ЧТ</span>
+                                <span>ПТ</span> <span>СБ</span> <span>ВС</span> <span>ПН</span>
+                              </div>
+                          </div>
+                          <span class="repair__main-text">
+                            Количество обращений выросло до 280 в месяц!
+                        </span>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+
+    </div>
+    <div class="form__block">
+        <div class="container">
+            <div class="form-container">
+                <img src="./assets/repa-icon.svg" alt="Логотип" class="logo">
+                <h2>Обратная Связь</h2>
+                <p>Мы создаем репутацию, которая работает на ваш бизнес</p>
+                <form id="contact-form">
+                    <label>Имя</label>
+                    <input type="text" name="name" placeholder="Введите ваше имя" required>
+                
+                    <label>Контакт</label>
+                    <input type="text" name="contact" placeholder="Введите ваш контакт" required>
+                
+                    <label>Подробности</label>
+                    <textarea name="details" style="resize: none;" placeholder="Введите подробности"></textarea>
+                
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+            <div class="form__background">
+                <div class="contacts" id="contacts-link">
+                    <h3 >Контакты</h3>
+                    <p style="margin-top: 15%;" ><img src="./assets/gmail-icon.svg" alt="Gmail"> Repapro@Gmail.Com</p>
+                    <p style="margin: 5% 0;"><img src="./assets/what-icon.png" alt="WhatsApp"> +7 953 058 9461</p>
+                    <p style="padding-bottom: 25%;"><img src="./assets/tg-icon.png" alt="Telegram"> @Frglts</p>
+                </div>
+            </div>
+
+        </div>
+    
+        </div>
+    </div>
+    
 
     </main>
-
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="./assets/repa-icon.svg" alt="Logo" class="logo">
+                <span>©2025 RepaPro</span>
+            </div>
+            
+            <div class="footer-center">
+                <hr class="divider">
+                <nav>
+                    <a href="#main-link">На главную</a>
+                    <a href="#about__us-link">О нас</a>
+                    <a href="#contacts-link">Контакты</a>
+                </nav>
+            </div>
+            
+            <div class="footer-right">
+                <span>Contact us</span>
+                <div class="social-icons">
+                    <img src="./assets/gmail-icon.svg" style="padding-top: 5px; height: 20px;" alt="Gmail">
+                    <img src="./assets/what-icon.png" alt="WhatsApp">
+                    <img src="./assets/tg-icon.png" alt="Telegram">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

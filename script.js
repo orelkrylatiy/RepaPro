@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
+    const successMessage = document.getElementById("success-message");
 
     form.addEventListener("submit", async function (event) {
         event.preventDefault(); // Останавливаем стандартную отправку формы
@@ -20,10 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 mode: 'no-cors', // Disable CORS
             });
             alert("Данные отправлены: " + result.status);
+            successMessage.style.display = "block"; // Показываем сообщение
+            form.reset(); // Очищаем форму
+            setTimeout(() => successMessage.style.display = "none", 3000); // Убираем через 3 сек
+
         } catch (error) {
             form.reset();
             alert("Данные отправлены: " + result.status);
+            successMessage.style.display = "block"; // Показываем сообщение
+            form.reset(); // Очищаем форму
+            setTimeout(() => successMessage.style.display = "none", 3000); // Убираем через 3 сек
+
         }
         form.reset();
+        successMessage.style.display = "block"; // Показываем сообщение
+        form.reset(); // Очищаем форму
+        setTimeout(() => successMessage.style.display = "none", 3000); // Убираем через 3 сек
+
     });
 });

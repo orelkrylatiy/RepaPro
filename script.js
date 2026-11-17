@@ -1,42 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form");
-    const successMessage = document.getElementById("success-message");
+    const status = document.getElementById("form-status");
+    if (!form || !status) return;
 
-    form.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Останавливаем стандартную отправку формы
-
-        const formData = new FormData(form);
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const button = form.querySelector('button[type="submit"]');
+        const fields = new FormData(form);
         const data = {
-            name: formData.get("name"),
-            contact: formData.get("contact"),
-            details: formData.get("details"),
+            name: fields.get("name"),
+            contact: fields.get("contact"),
+            details: fields.get("details"),
         };
+
+        button.disabled = true;
+        status.textContent = "Отправляем заявку…";
         try {
-            const response = await fetch("https://script.google.com/macros/s/AKfycbzo6nuuSASOP_Z0008Mrorlr7lI8KbxpMr6ZX5_j94dJkXsP-8Jr664onunqQRmHw-u/exec", {
+            await fetch("https://script.google.com/macros/s/AKfycbzo6nuuSASOP_Z0008Mrorlr7lI8KbxpMr6ZX5_j94dJkXsP-8Jr664onunqQRmHw-u/exec", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
-                mode: 'no-cors', // Disable CORS
+                mode: "no-cors",
             });
-            alert("Данные отправлены: " + result.status);
-            successMessage.style.display = "block"; // Показываем сообщение
-            form.reset(); // Очищаем форму
-            setTimeout(() => successMessage.style.display = "none", 3000); // Убираем через 3 сек
-
-        } catch (error) {
-            form.reset();
-            alert("Данные отправлены: " + result.status);
-            successMessage.style.display = "block"; // Показываем сообщение
-            form.reset(); // Очищаем форму
-            setTimeout(() => successMessage.style.display = "none", 3000); // Убираем через 3 сек
-
+            // An opaque response does not confirm delivery to the spreadsheet.
+            status.textContent = "Запрос отправлен, но доставка не подтверждена. Если ответа не будет, напишите на Repapro@Gmail.Com.";
+        } catch {
+            status.textContent = "Не удалось отправить заявку. Напишите на Repapro@Gmail.Com.";
+        } finally {
+            button.disabled = false;
         }
-        form.reset();
-        successMessage.style.display = "block"; // Показываем сообщение
-        form.reset(); // Очищаем форму
-        setTimeout(() => successMessage.style.display = "none", 3000); // Убираем через 3 сек
-
     });
 });
